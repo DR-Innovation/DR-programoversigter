@@ -9,6 +9,25 @@ body {
   font-size: 13px;
 }
 
+h1 {
+  text-align: center;
+}
+
+a.example {
+  text-align: center;
+  display: block;
+}
+
+a.example img {
+  height: 350px;
+}
+a.example + .caption {
+  text-align: center;
+  display: block;
+  font-size: 10px;
+  font-style: italic;
+}
+
 .float-clear {
   clear: both;
 }
