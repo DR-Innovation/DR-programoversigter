@@ -1,16 +1,63 @@
 
 body {
-  /* Centered column */
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-
   font-family: Arial;
   font-size: 13px;
 }
 
+#body-column {
+  /* Centered column */
+  position: relative;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+#hack4dk-logo {
+  position: fixed; /* absolute; */
+  top: 0px;
+  right: 0px;
+}
+
+@media all and (max-width:800px) {
+  #hack4dk-logo {
+    display: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  /* You cannot make visited link transparent, even with color: rgba() */
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector */
+  /* color: rgba(24, 0, 255, 0.3); */
+  color: #8B8BFE;
+}
+
+a[href^="http://chaos-community.github.io/CHAOS-API-Documentation"] {
+  color: #595959;
+}
+
 h1 {
   text-align: center;
+}
+
+a[href="#overview-menu"] {
+  float: right;
+  font-size: 10px;
+}
+
+article > h2:first-child {
+  border-bottom: 1px solid #CCC;
+}
+
+article {
+  margin-top: 30px;
+}
+
+/* Again LARM.fm uses CHAOS v6 and the library in it's current form
+   expects v4 */
+#chaos-php-library, #chaos-javascript-library {
+  display: none;
 }
 
 a.example {
@@ -32,41 +79,7 @@ a.example + .caption {
   clear: both;
 }
 
-article {
-  max-width: 800px;
-  position: absolute;
-}
-article + article {
-  left: -1000px;
-}
 
-div.slider-arrow {
-  height: 100%;
-  position: absolute;
-  left: 900px;
-  top: 0;
-  vertical-align: middle;
-}
-
-
-div.example-data {
-  width: 50%;
-  display: inline-block;
-
-  vertical-align: top;
-}
-
-div.example-data pre {
-  max-height: 460px;
-  overflow: auto;
-
-  margin: 0;
-}
-
-div.example-data .caption {
-  font-size: 10px;
-  font-style: italic;
-}
 
 /* Code / API examples */
 div.example {
