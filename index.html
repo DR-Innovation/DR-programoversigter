@@ -46,21 +46,18 @@
       <section>
         <h2>API oversigt</h2>
         <p>
-          CHAOS kan tilgås via to dokumenterede API'er:
+          CHAOS kan tilgås via tre dokumenterede API'er:
 
           <ul>
             <li>Rå HTTP-kald til CHAOS (<a
           href="http://chaos-community.github.io/CHAOS-API-Documentation/v6/API/index.html">Dokumentation</a>)</li>
-            <!-- The Javascript client works with version v4 of CHAOS
-            <li>CHAOS' Javascript bibliotek (<a
-          href="http://chaos-community.github.io/CHAOS-API-Documentation/v6/JavaScript%20Portal%20Client/index.html">Dokumentation</a>)</li>
-            -->
-            <!-- The PHP client works with version v4 of CHAOS
-            <li>CHAOS' PHP bibliotek (<a
+          <li><strike>CHAOS' Javascript bibliotek (<a
+          href="http://chaos-community.github.io/CHAOS-API-Documentation/v6/JavaScript%20Portal%20Client/index.html">Dokumentation</a>)
+            </strike></li>
+          <li><strike>CHAOS' PHP bibliotek (<a
           href="http://chaos-community.github.io/CHAOS-API-Documentation/v6/PHP%20Portal%20Client/index.html">Dokumentation</a>,
         <a
-          href="https://github.com/CHAOS-Community/CHAOS.Portal.Client-PHP">Github</a>)</li>
-            -->
+          href="https://github.com/CHAOS-Community/CHAOS.Portal.Client-PHP">Github</a>)</strike></li>
           </ul>
 
           <a
@@ -72,13 +69,8 @@
         </p>
 
         <p>
-          Vi vil her gennemgå hvordan du fremskaffer programoversigter vha. de
-          to API'er:
-          <ul id="overview-menu">
-            <li><a href="#raw-http">Rå HTTP-kald</a></li>
-            <!-- <li><a href="#chaos&#45;javascript&#45;library">CHAOS' Javascript bibliotek</a></li> -->
-            <!-- <li><a href="#chaos&#45;php&#45;library">CHAOS' PHP bibliotek</a></li> -->
-          </ul>
+          Vi vil her gennemgå hvordan du fremskaffer programoversigter vha. 
+            rå HTTP-kald.
         </p>
       </section>
 
@@ -104,8 +96,12 @@
                 En session er nu oprettet. Du skal bruge sessionens ID
                 (<code>sessionGUID</code>), der er gemt følgende sted i dataen:
               </p>
-              <pre>PortalResult > ModuleResults > ModuleResult[Fullname=Portal] > Results >
-              Result > Guid</pre>
+              <pre><code>&lt;PortalResult&gt;
+  &lt;ModuleResults&gt;
+    &lt;ModuleResult Fullname="Portal"&gt;
+      &lt;Results&gt;
+        &lt;Result&gt;
+          &lt;Guid&gt;</code></pre>
 
               Som standard vil du få XML-data tilbage. Hvis du foretrækker JSON, kan
               du tilføje GET-parametren "format=json" til URL'en:
